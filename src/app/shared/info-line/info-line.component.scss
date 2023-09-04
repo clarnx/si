@@ -1,0 +1,28 @@
+.info-line {
+  //background-color: var(--dark-background-color);
+  background-color: var(--primary-color);
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  padding: 4px 0;
+
+  .time-wrapper,
+  .phone-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: var(--column-gap);
+    align-items: center;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  mat-icon {
+    font-size: 0.8rem;
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}

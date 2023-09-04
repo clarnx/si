@@ -1,0 +1,84 @@
+.container {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  display: grid;
+  justify-items: center;
+  padding: 20px 0;
+
+  .footer-wrapper {
+    max-width: 80%;
+  }
+
+  h3 {
+    margin: 20px 0;
+  }
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: var(--column-gap);
+  justify-items: center;
+
+  .item-container {
+    p {
+      text-align: justify;
+    }
+
+    .contacts-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: var(--column-gap);
+      align-items: baseline;
+
+      mat-icon {
+        font-size: 0.9rem;
+        width: 0.9rem;
+        height: 0.9rem;
+      }
+    }
+
+    .working-hours-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: var(--column-gap);
+    }
+  }
+}
+
+.siluets-media {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+
+  .media-icons-wrapper {
+    button {
+      //background-color: white;
+      &:last-of-type {
+        margin-left: 10px;
+      }
+
+      mat-icon {
+        //color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.siluets-rights-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: var(--column-gap);
+  justify-items: center;
+
+  .siluets-rights {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: var(--column-gap);
+  }
+
+  p {
+    font-size: var(--font-sm);
+  }
+}

@@ -1,0 +1,38 @@
+@use '@angular/material' as mat;
+@use 'palette' as *;
+@use '@angular/material/theming' as *;
+
+$siluets-base-primary: mat.define-palette($siluets-primary);
+$siluets-base-accent: mat.define-palette($siluets-accent);
+$siluets-base-theme: mat.define-light-theme((color: (primary: $siluets-base-primary,
+        accent: $siluets-base-accent,
+      ),
+    ));
+
+:root {
+  --primary-color: #{mat.get-color-from-palette($siluets-primary, 700)};
+  --accent-color: #{mat.get-color-from-palette($siluets-accent, 900)};
+
+  --primary-hover-color: #{mat.get-color-from-palette($siluets-primary, 900)};
+  --accent-hover-color:#{mat.get-color-from-palette($siluets-accent, 900)};
+
+  --global-font-color: #58595b;
+  --border-radius: 4px;
+  --hover-transition: all .1s ease-in-out;
+
+  --global-font-size: 1.2rem;
+  --font-sm: 1rem;
+  --font-md: 1.2rem;
+  --font-lg: 1.8rem;
+  --font-xl: 2.5rem;
+
+  --font-weight-bold: 600;
+  --font-weight-extra-bold: 800;
+
+  --column-gap: 10px;
+  --main-background: #ffffff;
+  --dark-background-color: #484849;
+}
+
+@include mat.core();
+@include mat.all-component-themes($siluets-base-theme);

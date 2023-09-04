@@ -1,0 +1,56 @@
+.font-sm {
+  font-size: var(--font-sm);
+}
+
+.font-md {
+  font-size: var(--font-md);
+}
+
+.font-lg {
+  font-size: var(--font-lg);
+}
+
+.font-xl {
+  font-size: var(--font-xl);
+}
+
+.bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.extra-bold {
+  font-weight: var(--font-weight-extra-bold);
+}
+
+.mat-typography {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @extend .bold, .extra-bold;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: var(--font-xl);
+  }
+
+  h2 {
+    font-size: var(--font-lg);
+  }
+
+  h3 {
+    font-size: var(--font-md);
+  }
+
+  h4 {
+    font-size: var(--font-sm);
+  }
+
+  p {
+    margin: 0;
+    font-size: var(--font-md);
+  }
+}

@@ -10,7 +10,7 @@ export const APP_ROUTES: Routes = [
         path: 'home',
         loadComponent: () =>
           import('./pages/siluets/pages/page-home/page-home.component').then(m => m.PageHomeComponent),
-        title: 'Home',
+        title: 'Siluets',
       },
       {
         path: 'news',
