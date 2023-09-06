@@ -1,12 +1,13 @@
+@import "/src/assets/styles/core/breakpoints";
+
 .info-line {
-  //background-color: var(--dark-background-color);
-  background-color: var(--primary-color);
-  color: white;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
   padding: 4px 0;
+  background-color: var(--primary-color);
+  color: white;
 
   .time-wrapper,
   .phone-wrapper {
@@ -24,5 +25,16 @@
     font-size: 0.8rem;
     width: 0.8rem;
     height: 0.8rem;
+  }
+}
+
+@include screen('tablet') {
+  .info-line {
+    display: flex;
+    justify-content: space-evenly;
+
+    .time-wrapper {
+      display: none;
+    }
   }
 }

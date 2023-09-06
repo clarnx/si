@@ -2,23 +2,20 @@
 @use 'palette' as *;
 @use '@angular/material/theming' as *;
 
-$siluets-base-primary: mat.define-palette($siluets-primary);
-$siluets-base-accent: mat.define-palette($siluets-accent);
-$siluets-base-theme: mat.define-light-theme((color: (primary: $siluets-base-primary,
-        accent: $siluets-base-accent,
-      ),
+$siluets-primary: mat.define-palette($siluets-primary);
+$siluets-accent: mat.define-palette($siluets-accent);
+
+$siluets-base-theme: mat.define-light-theme((color: (primary: $siluets-primary, accent: $siluets-accent, ),
     ));
 
 :root {
-  --primary-color: #{mat.get-color-from-palette($siluets-primary, 700)};
-  --accent-color: #{mat.get-color-from-palette($siluets-accent, 900)};
+  --primary-color: #{mat.get-color-from-palette($siluets-primary, 500)};
+  --accent-color: #{mat.get-color-from-palette($siluets-accent, 700)};
 
-  --primary-hover-color: #{mat.get-color-from-palette($siluets-primary, 900)};
-  --accent-hover-color:#{mat.get-color-from-palette($siluets-accent, 900)};
+  --primary-hover-color: #{mat.get-color-from-palette($siluets-primary, 200)};
+  --accent-hover-color:#{mat.get-color-from-palette($siluets-accent, 300)};
 
   --global-font-color: #58595b;
-  --border-radius: 4px;
-  --hover-transition: all .1s ease-in-out;
 
   --global-font-size: 1.2rem;
   --font-sm: 1rem;
@@ -30,8 +27,10 @@ $siluets-base-theme: mat.define-light-theme((color: (primary: $siluets-base-prim
   --font-weight-extra-bold: 800;
 
   --column-gap: 10px;
+  --row-gap: 10px;
   --main-background: #ffffff;
   --dark-background-color: #484849;
+  --border-radius: 4px;
 }
 
 @include mat.core();

@@ -1,16 +1,10 @@
 .container {
-  //width: 100%;
-  margin-top: 126px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .home-main-image {
-  height: 325px;
-  background: transparent;
-  // background-image: url('/assets/images/home_main.png');
-  // background-size: cover;
-  // background-position: center;
+  height: 300px; //TODO! Needs attention!!!!!
 }
 
 .description {
@@ -23,8 +17,6 @@
     max-width: 60%;
   }
 
-  //text-align: center;
-  //width: 707px;
   h1,
   h2,
   p {
@@ -41,29 +33,22 @@
 
   p {
     margin: 30px 0 50px 0;
+    font-size: 1.5rem;
   }
 }
 
 .gift-card {
-  background: transparent;
-  //height: 400px;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
+  justify-items: center;
+  padding: 50px 0;
 
-
-  .gift-card-image {
-    //width: 70%;
-    //z-index: 999;
-    height: 325px;
-    background-image: url('/assets/images/davanu_karte.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    //background-repeat: no-repeat;
-    background-position: center;
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
-
 
 .divider-wrapper {
   display: grid;
@@ -77,36 +62,32 @@
     width: 100%;
     max-width: 100px;
   }
-
-
 }
 
 .we-use {
-  display: grid;
-  justify-items: center;
   background-color: var(--main-background);
+  max-height: 700px; //TODO! Needs attention!!!!!
+  min-height: 400px; //TODO! Needs attention!!!!!
 
   .section-wrapper {
     max-width: 80%;
+    margin: 0 auto;
 
     .images-wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       justify-items: center;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
 
       img {
-        width: 45%;
+        max-width: 40%; //TODO! Needs attention!!!!!
+        min-width: 100px; //TODO! Needs attention!!!!!
         height: auto;
 
         &:nth-of-type(1) {
-          width: 30%;
-          height: auto;
-        }
-
-        &:nth-of-type(3) {
-          width: 40%;
+          max-width: 30%; //TODO! Needs attention!!!!!
+          min-width: 100px; //TODO! Needs attention!!!!!
           height: auto;
         }
       }

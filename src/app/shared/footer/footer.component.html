@@ -1,33 +1,32 @@
 <div class="container">
   <div class="footer-wrapper">
-    <div class="footer-content mb-10">
-      <div class="item-container">
+    <div class="footer-content">
+      <div class="item-container item1">
         <h3>PAR MUMS</h3>
         <p>Jūsu skaistums nevainojamā izpildījumā <br>
           Visos laikos skaistuma un jaunības saglabāšanas noslēpumi ir piesaistījuši uzmanību. Mūsu salona mājīgajā
           atmosfērā daudzu gadu laikā mēs rūpējamies par visām jūsu skaistuma šķautnēm. Individuāla pieeja, efektīvas
           procedūras un jūsu acu starojošais smaids ir mūsu darba mērķis. Mēs padarīsim uzturēšanos salonā jums
-          maksimāli
-          ērtu un komfortablu.</p>
+          maksimāli ērtu un komfortablu.</p>
       </div>
-      <div class="item-container">
+      <div class="item-container item2">
         <h3>PAKALPOJUMI</h3>
-        <li>Vaksacija</li>
-        <li>Kermenis</li>
-        <li>Seja</li>
+        <li routerLink="services/body">Kermenis</li>
+        <li routerLink="services/face">Seja</li>
+        <li routerLink="services/waxing">Vaksacija</li>
       </div>
-      <div class="item-container">
+      <div class="item-container item3">
         <h3>KONTAKTI</h3>
         <div class="contacts-item">
           <mat-icon fontIcon="location_on"></mat-icon>
-          <p>Klijānu iela 6, Rīga, LV-1013,<br>(Bezmaksas parkings)</p>
+          <p routerLink="contacts">Klijānu iela 6, Rīga, LV-1013,<br>(Bezmaksas parkings)</p>
         </div>
         <div class="contacts-item">
           <mat-icon fontIcon="phone"></mat-icon>
           <p>+371 29848108 <br> Pieteikties pieņemšanai <br> var iepriekš pierakstoties</p>
         </div>
       </div>
-      <div class="item-container">
+      <div class="item-container item4">
         <h3>DARBA LAIKS</h3>
         <div class="working-hours-item">
           <p>Pirmdiena</p>
@@ -62,8 +61,13 @@
     <div class="siluets-media mb-10">
       <h3>SILUETS</h3>
       <div class="media-icons-wrapper">
-        <mat-icon>facebook</mat-icon>
-        <mat-icon>photo_camera</mat-icon>
+        <a href="https://www.facebook.com/Siluets.lv/" target="_blank" rel="noreferrer noopener">
+          <mat-icon>facebook</mat-icon>
+        </a>
+        <a href="https://instagram.com/siluets.lv?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==" target="_blank"
+          rel="noreferrer noopener">
+          <mat-icon>photo_camera</mat-icon>
+        </a>
       </div>
     </div>
     <div class="siluets-rights-wrapper">

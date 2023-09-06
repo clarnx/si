@@ -1,5 +1,33 @@
 .container {
-  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+
+  .services {
+    margin-top: 148px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    max-width: 80%;
+
+    .body-item {
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+    }
+
+    .face-item {
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+    }
+
+    .waxing-item {
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+    }
+  }
 }
 
 .router-active {

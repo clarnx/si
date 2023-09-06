@@ -1,31 +1,71 @@
-app-info-line {
-  width: 100%;
-}
+@import "/src/assets/styles/core/breakpoints";
 
 .nav-wrapper {
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr;
   align-items: center;
   justify-items: center;
-  height: 100px;
   background-color: var(--main-background);
-  width: 100%;
-  //border-bottom: 1px solid red;
+
+  .image-wrapper {
+    max-height: 120px;
+    max-width: 120px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+  }
 
   .nav-items {
     font-size: 1.4rem;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    column-gap: var(--column-gap);
-  }
+    grid-template-columns: repeat(5, auto);
+    column-gap: 20px;
 
+    a {
+      color: var(--global-font-color);
+
+      &.router-active {
+        color: var(--primary-color);
+      }
+
+      &:hover {
+        transition: 0.3s;
+        color: var(--primary-color);
+      }
+    }
+  }
 }
 
+@include screen ('tablet') {
+  .nav-wrapper {
+    padding-top: 10px;
 
+    .image-wrapper {
+      grid-template-columns: 1fr auto 1fr;
+    }
 
+    .nav-items {
+      font-size: 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: var(--row-gap);
+      text-align: center;
 
+      a {
+        color: var(--global-font-color);
 
+        &.router-active {
+          color: var(--primary-color);
+        }
 
-.router-active {
-  color: red;
+        &:hover {
+          transition: 0.3s;
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
 }
