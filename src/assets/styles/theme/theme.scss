@@ -19,7 +19,7 @@ $siluets-base-theme: mat.define-light-theme((color: (primary: $siluets-primary, 
 
   --global-font-size: 1.2rem;
   --font-sm: 1rem;
-  --font-md: 1.2rem;
+  --font-md: 1.4rem;
   --font-lg: 1.8rem;
   --font-xl: 2.5rem;
 
@@ -29,6 +29,7 @@ $siluets-base-theme: mat.define-light-theme((color: (primary: $siluets-primary, 
   --column-gap: 10px;
   --row-gap: 10px;
   --main-background: #ffffff;
+  --secondary-background: #{mat.get-color-from-palette($siluets-primary, 100)};
   --dark-background-color: #484849;
   --border-radius: 4px;
 }

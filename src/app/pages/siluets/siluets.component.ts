@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FooterComponent } from 'src/app/shared/footer/footer.component';
-import { NavItemsComponent } from 'src/app/shared/nav-items/nav-items.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavItemsComponent } from './components/nav-items/nav-items.component';
 
 @Component({
   selector: 'app-siluets',

@@ -8,13 +8,7 @@ import { LanguageSwitcherComponent } from '../language-switcher/language-switche
 @Component({
   selector: 'app-nav-items',
   standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatIconModule,
-    InfoLineComponent,
-    LanguageSwitcherComponent
-  ],
+  imports: [CommonModule, RouterModule, MatIconModule, InfoLineComponent, LanguageSwitcherComponent],
   templateUrl: './nav-items.component.html',
   styleUrls: ['./nav-items.component.scss'],
 })
