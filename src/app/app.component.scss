@@ -1,6 +1,15 @@
+@import "/src/assets/styles/core/breakpoints";
+
 .container {
   background-image: url('../assets/images/main_background.png');
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@include screen ('phone') {
+  .container {
+    background-image: url('../assets/images/main_background_mobile.png');
+  }
 }

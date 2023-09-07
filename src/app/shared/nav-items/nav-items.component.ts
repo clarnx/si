@@ -1,8 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { InfoLineComponent } from '../info-line/info-line.component';
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
@@ -15,9 +13,7 @@ import { LanguageSwitcherComponent } from '../language-switcher/language-switche
     RouterModule,
     MatIconModule,
     InfoLineComponent,
-    LanguageSwitcherComponent,
-    MatMenuModule,
-    MatButtonModule,
+    LanguageSwitcherComponent
   ],
   templateUrl: './nav-items.component.html',
   styleUrls: ['./nav-items.component.scss'],

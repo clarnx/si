@@ -1,16 +1,18 @@
 <app-info-line></app-info-line>
 
-<header class="nav-wrapper">
+<section class="nav-wrapper">
   <div class="image-wrapper">
-    <img src="assets/images/siluets_logo_transparent_background.png" alt="siluets_logo" loading="eager"
-      routerLink="home">
+    <img src="assets/images/siluets_logo_transparent_background.png" width="120" height="120" alt="siluets_logo"
+      loading="eager" routerLink="home">
   </div>
-  <section class="nav-items">
+
+  <div class="nav-items">
     <a routerLink="/home" routerLinkActive="router-active">Sakums</a>
     <a routerLink="/services" routerLinkActive="router-active">Pakalpojumi</a>
     <a routerLink="/news" routerLinkActive="router-active">Jaunumi</a>
     <a routerLink="/offers" routerLinkActive="router-active">Piedavajumi</a>
     <a routerLink="/contacts" routerLinkActive="router-active">Kontakti</a>
-  </section>
+  </div>
+  
   <app-language-switcher></app-language-switcher>
-</header>
+</section>

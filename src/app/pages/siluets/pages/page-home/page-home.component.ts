@@ -1,13 +1,13 @@
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-home',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, NgOptimizedImage, MatDividerModule],
+  imports: [CommonModule, MatButtonModule, MatDividerModule],
   templateUrl: './page-home.component.html',
   styleUrls: ['./page-home.component.scss'],
 })

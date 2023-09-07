@@ -8,8 +8,6 @@
   background-color: var(--main-background);
 
   .image-wrapper {
-    max-height: 120px;
-    max-width: 120px;
 
     img {
       max-width: 100%;
@@ -41,7 +39,7 @@
 
 @include screen ('tablet') {
   .nav-wrapper {
-    padding-top: 10px;
+    padding: 10px 0;
 
     .image-wrapper {
       grid-template-columns: 1fr auto 1fr;
