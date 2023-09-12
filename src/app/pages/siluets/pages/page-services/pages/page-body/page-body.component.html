@@ -1,5 +1,32 @@
 <div class="container">
-  <a routerLink="lpg-massage" routerLinkActive="router-active">LPG massage</a>
-  <a routerLink="wrapping" routerLinkActive="router-active">Wrapping</a>
+
+  <section class="home-main-image">
+    <h1>Ķermenis</h1>
+  </section>
+
+  <section class="services-items">
+    <div class="card">
+      <img src="assets/images/services_body_lpg_endermologie-removebg-preview.png" width="500" height="500"
+        alt="services_body_lpg_endermologie_image">
+      <button mat-button routerLink="lpg-massage">
+        LPG masāža
+      </button>
+    </div>
+    <div class="card">
+      <p>Skaists un labi kopts ķermenis ir daudzu cilvēku sapnis. Mēs atklāsim Jums noslēpumu, kā saglabāt šo skaistumu.
+      </p>
+    </div>
+    <div class="card">
+      <img src="assets/images/services_body_wrapping-removebg-preview.png" width="500" height="500"
+        alt="services_body_wrapping_image">
+      <button mat-button routerLink="wrapping">
+        Ietīšana
+      </button>
+    </div>
+  </section>
+
+  <section class="home-main-image">
+  </section>
+
 </div>
 <router-outlet></router-outlet>

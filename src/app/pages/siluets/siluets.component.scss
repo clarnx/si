@@ -1,7 +1,10 @@
 .main-container {
+  position: relative;
+
   app-nav-items {
-    z-index: 999;
     position: fixed;
+    z-index: 999;
+    top: 0;
     width: 100%;
   }
 }

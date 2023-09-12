@@ -1,3 +1,80 @@
+@import "/src/assets/styles/core/breakpoints";
+
 .container {
-  margin-top: 130px;
+  display: grid;
+  grid-template-rows: 397px auto 277px;
+
+  .home-main-image {
+    h1 {
+      margin-top: 244px;
+      text-align: center;
+    }
+  }
+
+  .offers-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--main-background);
+    padding: 50px 0;
+    justify-items: center;
+
+    .body-offers,
+    .face-offers {
+      .offer-item-row {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto auto;
+        column-gap: 20px;
+        align-items: center;
+        padding: 10px;
+      }
+    }
+
+    .mat-mdc-button {
+      max-width: 100%;
+      width: 100%;
+      color: white;
+      padding: 40px;
+      background-color: var(--primary-color);
+      font-size: var(--font-lg);
+      transition: 0.3s;
+      border-radius: 0;
+      margin-bottom: 50px;
+
+      &:hover {
+        background-color: var(--primary-hover-color);
+      }
+
+      --mat-mdc-button-persistent-ripple-color: {}
+    }
+  }
+}
+
+@include screen ('small-desktop') {
+  .container {
+    .home-main-image {
+      h1 {
+        font-size: var(--font-lg);
+        margin-top: 250px;
+      }
+    }
+  }
+}
+
+@include screen ('tablet') {
+  .container {
+    .home-main-image {
+      h1 {
+        font-size: var(--font-md);
+        margin-top: 284px;
+      }
+    }
+  }
+}
+
+@include screen ('phone') {
+  .container {
+    .offers-items {
+      padding: 10px;
+    }
+  }
 }

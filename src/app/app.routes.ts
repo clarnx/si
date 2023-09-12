@@ -13,19 +13,14 @@ export const APP_ROUTES: Routes = [
         title: 'Siluets',
       },
       {
-        path: 'news',
-        loadComponent: () => import('./pages/siluets/pages/news/news.component').then(m => m.NewsComponent),
-        title: 'News',
+        path: 'blog',
+        loadComponent: () => import('./pages/siluets/pages/blog/blog.component').then(m => m.BlogComponent),
+        title: 'Blog',
       },
       {
-        path: 'news/gigi',
-        loadComponent: () => import('./pages/siluets/pages/news/pages/gigi/gigi.component').then(m => m.GigiComponent),
-        title: 'Gigi',
-      },
-      {
-        path: 'news/beauty',
+        path: 'blog/beauty',
         loadComponent: () =>
-          import('./pages/siluets/pages/news/pages/beauty/beauty.component').then(m => m.BeautyComponent),
+          import('./pages/siluets/pages/blog/pages/beauty/beauty.component').then(m => m.BeautyComponent),
         title: 'Beauty',
       },
       {

@@ -1,7 +1,134 @@
+@import "/src/assets/styles/core/breakpoints";
+
 .container {
-  margin-top: 130px;
+  display: grid;
+  grid-template-rows: 397px auto 277px;
+
+  .home-main-image {
+    h1 {
+      margin-top: 244px;
+      text-align: center;
+    }
+  }
+
+  .services-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--main-background);
+    padding: 50px 0;
+    align-items: center;
+
+    .card {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+
+      img {
+        max-width: 40%;
+        width: 100%;
+        height: auto;
+      }
+
+      .mat-mdc-button {
+        max-width: 40%;
+        width: 100%;
+        color: white;
+        padding: 40px;
+        background-color: var(--primary-color);
+        font-size: var(--font-md);
+        transition: 0.3s;
+        border-radius: 0;
+
+        &:hover {
+          background-color: var(--primary-hover-color);
+        }
+
+        --mat-mdc-button-persistent-ripple-color: {}
+      }
+
+      .card-text {
+        h2 {
+          margin-bottom: 10px;
+        }
+
+        text-align: center;
+      }
+    }
+  }
 }
 
-.router-active {
-  color: chocolate;
+@include screen ('small-desktop') {
+  .container {
+    .home-main-image {
+      h1 {
+        font-size: var(--font-lg);
+        margin-top: 250px;
+      }
+    }
+
+    .services-items {
+      .card {
+
+        img {
+          max-width: 50%;
+        }
+
+        .mat-mdc-button {
+          max-width: 50%;
+        }
+
+        .card-text {
+          h2 {
+            font-size: var(--font-md);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include screen ('tablet') {
+  .container {
+    .home-main-image {
+      h1 {
+        font-size: var(--font-md);
+        margin-top: 284px;
+      }
+    }
+
+    .services-items {
+      .card {
+        .card-text {
+
+          p {
+            font-size: var(--font-sm);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include screen ('phone') {
+  .container {
+    .services-items {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      row-gap: var(--row-gap);
+      padding: 10px;
+
+      .card {
+        img {
+          max-width: 100%;
+        }
+
+        .mat-mdc-button {
+          max-width: 100%;
+          padding: 26px;
+          font-size: var(--font-sm);
+        }
+      }
+    }
+  }
 }

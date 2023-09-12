@@ -11,12 +11,17 @@
     }
   }
 
-  .services-items {
+  .blog-items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     background-color: var(--main-background);
     padding: 50px 0;
     align-items: center;
+
+    .card-text {
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
     .card {
       display: grid;
@@ -24,13 +29,13 @@
       justify-items: center;
 
       img {
-        max-width: 40%;
+        max-width: 30%;
         width: 100%;
         height: auto;
       }
 
       .mat-mdc-button {
-        max-width: 40%;
+        max-width: 30%;
         width: 100%;
         color: white;
         padding: 40px;
@@ -61,6 +66,25 @@
         margin-top: 250px;
       }
     }
+
+    .blog-items {
+      .card {
+
+        img {
+          max-width: 50%;
+        }
+
+        .mat-mdc-button {
+          max-width: 50%;
+        }
+      }
+
+      .card-text {
+        h2 {
+          font-size: var(--font-md);
+        }
+      }
+    }
   }
 }
 
@@ -73,8 +97,9 @@
       }
     }
 
-    .services-items {
-      .card {
+    .blog-items {
+      .card-text {
+
         p {
           font-size: var(--font-sm);
         }
@@ -85,11 +110,7 @@
 
 @include screen ('phone') {
   .container {
-    .services-items {
-      display: grid;
-      grid-template-columns: 1fr;
-      align-items: center;
-      row-gap: var(--row-gap);
+    .blog-items {
       padding: 10px;
 
       .card {
@@ -102,6 +123,10 @@
           padding: 26px;
           font-size: var(--font-sm);
         }
+      }
+
+      .card-text {
+        margin-bottom: 10px;
       }
     }
   }

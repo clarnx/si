@@ -1,6 +1,36 @@
 <div class="container">
-  <a routerLink="massage" routerLinkActive="router-active">Massage</a>
-  <a routerLink="appliances" routerLinkActive="router-active">Appliances</a>
-  <a routerLink="peelings" routerLinkActive="router-active">Peelings</a>
+
+  <section class="home-main-image">
+    <h1>Seja</h1>
+  </section>
+
+  <section class="services-items">
+    <div class="card">
+      <img src="assets/images/services_face_massage.png" width="532" height="532" alt="services_face_massage_image">
+      <button mat-button routerLink="massage">
+        Masāža
+      </button>
+    </div>
+    <div class="card">
+      <div class="card-text">
+        <h2>Jūsu seja - vienīgā pasaulē</h2>
+        <p>
+          Tāpēc tai domātajām programmām ir jābūt unikālām un jāņem vērā visas sejas īpatnības. Mēs izvēlēsimies
+          tehniku,
+          kura dos vislabāko efektu.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/images/services_face_peeling.png" width="531" height="531" alt="services_face_peeling_image">
+      <button mat-button routerLink="peelings">
+        Pīlingi
+      </button>
+    </div>
+  </section>
+
+  <section class="home-main-image">
+  </section>
+
 </div>
 <router-outlet></router-outlet>

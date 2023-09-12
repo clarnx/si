@@ -101,12 +101,12 @@
   display: grid;
   grid-template-columns: 1fr;
   column-gap: var(--column-gap);
-  justify-items: center;
 
   .siluets-rights {
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: var(--column-gap);
+    align-items: center;
   }
 
   p {

@@ -18,18 +18,14 @@
   font-weight: var(--font-weight-bold);
 }
 
-.extra-bold {
-  font-weight: var(--font-weight-extra-bold);
-}
-
 .mat-typography {
 
   h1,
   h2,
   h3,
   h4,
-  h5 {
-    @extend .bold, .extra-bold;
+  h5,
+  p {
     margin: 0;
   }
 
@@ -50,7 +46,6 @@
   }
 
   p {
-    margin: 0;
     font-size: var(--font-md);
   }
 }

@@ -1,22 +1,7 @@
-<div class="container">
-  <h4>LV</h4>
-  <!-- <div class="image-wrapper">
-    <img src="assets/images/flag-square-latvia.png" alt="flag_latvia">
-  </div>
-  <div class="image-wrapper">
-    <img src="assets/images/flag-square-russia.png" alt="flag_russia">
-  </div> -->
-  <mat-button-toggle-group value="latvian">
-    <mat-button-toggle value="latvian" (change)="setLanguage($event.value)">
-
-      <!-- <img src="assets/images/flag-square-latvia.png" height="20" width="30" alt="flag_latvia"> -->
-
-
-    </mat-button-toggle>
-    <mat-button-toggle value="russian" (change)="setLanguage($event.value)">
-      <!-- <img src="assets/images/flag-square-russia.png" height="20" width="30" alt="flag_russia"> -->
-
-    </mat-button-toggle>
-  </mat-button-toggle-group>
-  <h4>RU</h4>
-</div>
+<mat-form-field>
+  <mat-select (selectionChange)="selectLanguage($event.value)" [(value)]="selectedLanguage" placeholder="Language">
+    <mat-option *ngFor="let language of languages" [value]="language.value">
+      {{language.label}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

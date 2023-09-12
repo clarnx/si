@@ -1,49 +1,6 @@
 @import "/src/assets/styles/core/breakpoints";
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  column-gap: var(--column-gap);
-  align-items: center;
-}
-
-.isSelected {
-  background-color: yellow;
-  scale: 1.1;
-}
-
-.mat-button-toggle {
-  opacity: 0.3;
-
-  &:first-of-type {
-    background-image: url('../../../assets/images/flag-square-latvia.png');
-    background-size: cover;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  &:last-of-type {
-    background-image: url('../../../assets/images/flag-square-russia.png');
-    background-size: cover;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-
-.mat-button-toggle-checked {
-  opacity: 1;
-}
-
-@include screen ('tablet') {
-  .container {
-    grid-template-columns: 1fr;
-  }
-
-  h4 {
-    display: none;
-  }
+mat-form-field {
+  max-width: 80px;
+  //max-height: 70px;
 }
