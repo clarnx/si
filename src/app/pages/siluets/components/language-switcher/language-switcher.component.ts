@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TranslateService } from '@ngx-translate/core';
-import { Language } from 'src/app/shared/interfaces/languages.interface';
+import { Language } from 'src/app/shared/interfaces/language.interface';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
