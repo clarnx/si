@@ -25,10 +25,11 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": {
+  "glob": "_redirects",
+  "input": "src",
+  "output": "/"
+},
             "styles": [
               "src/main.scss"
             ],
