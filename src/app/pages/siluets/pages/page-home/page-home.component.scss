@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 270px 1fr 270px auto 270px;
-  margin-top: 150px;
+  margin-top: 160px;
 
   .home-main-image {
     display: grid;
@@ -20,27 +20,14 @@
   grid-template-columns: 1fr;
   justify-items: center;
 
+  &.mobile {
+    h1:nth-of-type(2) {
+      display: none;
+    }
+  }
+
   .description-text {
     max-width: 60%;
-  }
-
-  h1,
-  h2,
-  p {
-    text-align: center;
-  }
-
-  h1 {
-    margin: 50px 0;
-  }
-
-  h2 {
-    margin: 50px 0;
-  }
-
-  p {
-    margin: 30px 0;
-    font-size: 1.5rem;
   }
 }
 
@@ -74,12 +61,12 @@
   background-color: var(--main-background);
 
   .section-wrapper {
-    max-width: 80%;
+    max-width: 60%;
     margin: 0 auto;
 
     .images-wrapper {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       justify-items: center;
       align-items: center;
       margin-bottom: 50px;
@@ -89,36 +76,62 @@
         width: 100%;
         min-width: 100px;
         height: auto;
+
+        &:nth-of-type(1),
+        &:nth-of-type(4) {
+          justify-self: start;
+        }
+
+        &:nth-of-type(3),
+        &:nth-of-type(6) {
+          justify-self: end;
+        }
+
+        &:nth-of-type(2) {
+          max-width: 30%;
+        }
       }
     }
+  }
+}
 
-    h1 {
-      text-align: center;
-      margin: 50px 0 30px 0;
+h1,
+h2,
+p {
+  text-align: center;
+}
+
+h1 {
+  margin: 50px 0;
+}
+
+p {
+  margin: 30px 0;
+}
+
+@include screen ('big-desktop') {
+  .description {
+    .description-text {
+      max-width: 95%;
+    }
+  }
+
+  .divider-wrapper {
+    mat-divider {
+      max-width: 95%;
+    }
+  }
+
+  .we-use {
+    .section-wrapper {
+      max-width: 95%;
     }
   }
 }
 
 @include screen ('small-desktop') {
-  .description {
-    .description-text {
-      max-width: 80%;
-    }
-
-    h1 {
-      margin: 30px 0;
-      font-size: var(--font-lg);
-    }
-
-    h2 {
-      margin: 30px 0 10px 0;
-      font-size: var(--font-md);
-    }
-
-    p {
-      margin: 10px 0 30px 0;
-      //font-size: var(--font-md);
-    }
+  .container {
+    grid-template-rows: 200px 1fr auto auto 200px;
   }
 
   .we-use {
@@ -126,45 +139,27 @@
       .images-wrapper {
         margin-bottom: 30px;
       }
-
-      h1 {
-        margin: 30px 0 20px 0;
-        font-size: var(--font-lg);
-      }
     }
+  }
+
+  h1 {
+    margin: 30px 0;
+    font-size: var(--font-lg);
+  }
+
+  h2 {
+    margin: 30px 0;
+    font-size: var(--font-md);
+  }
+
+  p {
+    margin: 30px 0;
   }
 }
 
 @include screen ('tablet') {
   .container {
-    margin-top: 200px;
-
-    .home-main-image {
-      h1 {
-        text-align: center;
-      }
-    }
-  }
-
-  .description {
-    .description-text {
-      max-width: 90%;
-    }
-
-    h1 {
-      margin: 20px 8px;
-      font-size: var(--font-md);
-    }
-
-    h2 {
-      margin: 20px 8px 10px 8px;
-      font-size: var(--font-sm);
-    }
-
-    p {
-      margin: 10px 5px 20px 5px;
-      font-size: var(--font-sm);
-    }
+    margin-top: 166px;
   }
 
   .we-use {
@@ -173,21 +168,48 @@
     align-items: center;
 
     .section-wrapper {
-      max-width: 90%;
-
       .images-wrapper {
-        margin-bottom: 0;
-      }
-
-      h1 {
-        margin: 0 0 30px 0;
-        font-size: var(--font-md);
+        margin-bottom: 10px;
       }
     }
+  }
+
+  h1 {
+    margin: 10px 8px;
+    font-size: var(--font-md);
+  }
+
+  p {
+    margin: 10px 8px;
+    font-size: var(--font-sm);
   }
 }
 
 @include screen ('phone') {
+  .container {
+    grid-template-rows: 100px 1fr auto auto 100px;
+
+    .home-main-image {
+      &.mobile {
+        h1 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .description {
+    &.mobile {
+      h1:nth-of-type(1) {
+        display: none;
+      }
+
+      h1:nth-of-type(2) {
+        display: block;
+      }
+    }
+  }
+
   .gift-card {
     padding: 10px;
 
@@ -198,8 +220,6 @@
 
   .we-use {
     .section-wrapper {
-      max-width: 100%;
-
       .images-wrapper {
         img {
           min-width: 80px;

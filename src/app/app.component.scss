@@ -7,9 +7,3 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
-
-@include screen ('phone') {
-  .container {
-    background-image: url('../assets/images/main_background_mobile.png');
-  }
-}

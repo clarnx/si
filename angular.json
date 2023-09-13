@@ -44,8 +44,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4kb",
+                  "maximumError": "5kb"
                 }
               ],
               "outputHashing": "all"
@@ -96,6 +96,14 @@
               "src/main.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/siluets",
+            "netlifyToken": "",
+            "siteId": "19d37494-7767-4340-a8ba-305c2aef90a2"
           }
         }
       }
