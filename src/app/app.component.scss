@@ -1,16 +1,9 @@
 @import "/src/assets/styles/core/breakpoints";
 
 .container {
-  height: 100%;
-
-  div {
-    background-image: url('../assets/images/main_background.png');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-
-  transition: height 999s linear;
-
+  background-image: url('../assets/images/main_background.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }

@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
 export const APP_ROUTES: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: '',
     loadComponent: () => import('./pages/siluets/siluets.component').then(m => m.SiluetsComponent),
